@@ -1,22 +1,22 @@
-import Header from "./component/Header";
-import Car from "./component/Car";
-import User from "./component/User";
-import Footer from "./component/Footer";
-import imgProfile from "./component/download.jpeg";
+import Navbar from "./component/Navbar/Navbar.js";
+import Car from "./component/Car/Car";
+import User from "./component/User/User";
+import Footer from "./component/Footer/Footer.js";
+import Main from "./component/Main/Main.js";
 
 function App() {
   return (
-    <div className="App" >
-      <Header />
+    <div className="container" >
+      <Navbar />
       <h1>Hello World</h1>
       < Car
-        merk="Ferrari"
-        harga={5}
+        merk="Ferrari 2024 Terbaru"
+        harga={5000000000}
         isNew={true}
-        colors={["Hitam", "Putih", "Abu-abu"]}
+        colors={["Hitam", "Putih", "Abu-abu", "Kuning"]}
         beli={() => alert("Sudah di beli")}
       />
-      < User
+      {/* < User
         nama="Deni Trio Saputra"
         alamat="Jakarta Selatan"
         angkatan={11}
@@ -24,10 +24,12 @@ function App() {
         status={false}
         gambar="https://cdn.motor1.com/images/mgl/rPR91/s3/ferrari-sf90-stradale-la-prova.jpg"
         profil={() => alert("Profil" + + "telah dibuka")}
-      />
+      /> */}
+      {/* <Main /> */}
       <Footer nama="Deni Trio Saputra" />
     </div>
   );
 }
 
 export default App;
+
