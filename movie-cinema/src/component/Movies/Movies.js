@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Movie from "../Movie/Movie";
 import "./Movies.css";
+import AddMovieForm from "../AddMovieForm/AddMovieForm";
 
-const Movies = () => {
-  const datas = [
+const Movies = () => {  
+  const [nama, setNama] = useState("ucup");
+
+  console.log(nama);
+ 
+  const [datas, setDatas] = useState([
     {
       title: "Judul film 1",
       year: 2004,
@@ -46,25 +51,23 @@ const Movies = () => {
       genre: "Sci-FI",
       poster: "https://picsum.photos/200/300?random=7",
     },
-    {
-      title: "Judul film 8",
-      year: 2004,
-      genre: "Horror",
+  ]);
+
+  const handleClick = () => {
+    const movie = {
       poster: "https://picsum.photos/200/300?random=8",
-    },
-    {
-      title: "Judul film 9",
-      year: 2004,
-      genre: "Gore",
-      poster: "https://picsum.photos/200/300?random=9",
-    },
-    {
-      title: "Judul film 10",
-      year: 2004,
-      genre: "Comedy",
-      poster: "https://picsum.photos/200/300?random=10",
-    },
-  ];
+      title: "Amazing Spiderman",
+      year: 2012,
+    };
+    setDatas([...datas, movie]);
+    setNama("Budi");
+  };
+
+  const addMovie = (movie) => {
+    setDatas([...datas, movie]);
+  };
+  console.log(datas);
+
   return (
     <div className="container">
       <h1>Latest Movies</h1>
@@ -79,7 +82,10 @@ const Movies = () => {
             />
           );
         })}
+        <p>{nama}<br /></p>
+        <button onClick={handleClick}><p>Add Movie</p></button>
       </div>
+      <AddMovieForm onAddMovie={addMovie}/>
     </div>
   );
 };

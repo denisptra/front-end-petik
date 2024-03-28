@@ -5,6 +5,7 @@ import Footer from "./component/Footer/Footer.js";
 import Main from "./component/Main/Main.js";
 import Movie from "./component/Movie/Movie.js";
 import Movies from "./component/Movies/Movies.js";
+import AddMovieForm from "./component/AddMovieForm/AddMovieForm.js";
 
 function App() {
   return (

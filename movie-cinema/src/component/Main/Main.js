@@ -1,6 +1,7 @@
 import Movies from "../Movies/Movies.js";
 import Hero from "../Hero/Hero.js";
 import User from "../User/User.js";
+import Counter from "../Counter/Counter.js";
 import "./Main.css";
 
 const Main = () => {
@@ -8,22 +9,22 @@ const Main = () => {
         {
             nama: "Deni Trio Saputra",
             member: "Platinum",
-            message:"Hello World"
+            message: "Hello World"
         },
         {
             nama: "Asam Sulfat",
             member: "Platinum",
-            message :"Saya adalah Asam Sulfat, dan saya menyukai film yang berkomedi."
+            message: "Saya adalah Asam Sulfat, dan saya menyukai film yang berkomedi."
         },
         {
             nama: "Samsul",
             member: "Gold",
-            message : "Saya adalah Samsul, iau samsek."
+            message: "Saya adalah Samsul, iau samsek."
         },
         {
             nama: "Udin",
             member: "Platinum",
-            message : "Saya Udin, seorang penggemar film horror."
+            message: "Saya Udin, seorang penggemar film horror."
         },
         {
             nama: "Janggar",
@@ -43,7 +44,7 @@ const Main = () => {
         {
             nama: "Jokowi",
             member: "Non Member",
-            message:"Saya Presiden"
+            message: "Saya Presiden"
         },
         {
             nama: "Mentri",
@@ -65,6 +66,7 @@ const Main = () => {
                     <User nama={data.nama} member={data.member} message={() => alert(data.message)} />
                 ))
             }
+            {/* <Counter /> */}
         </div>
     )
 }

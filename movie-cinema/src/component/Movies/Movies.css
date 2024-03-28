@@ -4,6 +4,9 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 16px;
 }
+button p{
+    padding: 5px;
+}
 
 /* Medium Screen */
 @media (max-width: 768px) {
