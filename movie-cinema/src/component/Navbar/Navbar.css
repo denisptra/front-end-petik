@@ -1,4 +1,9 @@
-/* Small Screen*/
+/* /* Small Screen */
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .navbar {
     background-color: #750E21;
     color: #fff;

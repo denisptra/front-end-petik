@@ -1,57 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Movie from "../Movie/Movie";
 import "./Movies.css";
 import AddMovieForm from "../AddMovieForm/AddMovieForm";
+import { getMovieList } from "../../api.js";
 
-const Movies = () => {  
+const Movies = () => {
   const [nama, setNama] = useState("ucup");
 
   console.log(nama);
- 
-  const [datas, setDatas] = useState([
-    {
-      title: "Judul film 1",
-      year: 2004,
-      genre: "Comedy",
-      poster: "https://picsum.photos/200/300?random=1",
-    },
-    {
-      title: "Judul film 2",
-      year: 2004,
-      genre: "Romance",
-      poster: "https://picsum.photos/200/300?random=2",
-    },
-    {
-      title: "Judul film 3",
-      year: 2004,
-      genre: "Action",
-      poster: "https://picsum.photos/200/300?random=3",
-    },
-    {
-      title: "Judul film 4",
-      year: 2004,
-      genre: "Fanntasy",
-      poster: "https://picsum.photos/200/300?random=4",
-    },
-    {
-      title: "Judul film 5",
-      year: 2004,
-      genre: "Anime",
-      poster: "https://picsum.photos/200/300?random=5",
-    },
-    {
-      title: "Judul film 6",
-      year: 2004,
-      genre: "Animasi",
-      poster: "https://picsum.photos/200/300?random=6",
-    },
-    {
-      title: "Judul film 7",
-      year: 2004,
-      genre: "Sci-FI",
-      poster: "https://picsum.photos/200/300?random=7",
-    },
-  ]);
+
+  const [datas, setDatas] = useState([]);
 
   const handleClick = () => {
     const movie = {
@@ -66,6 +24,14 @@ const Movies = () => {
   const addMovie = (movie) => {
     setDatas([...datas, movie]);
   };
+
+  useEffect(() => {
+    // menangkap data result api
+    getMovieList().then((result) => {
+      setDatas(result);
+    });
+  }, []);
+
   console.log(datas);
 
   return (
@@ -75,17 +41,17 @@ const Movies = () => {
         {datas.map((data) => {
           return (
             <Movie
+              id={ data.id}
               title={data.title}
-              year={data.year}
-              genre={data.genre}
-              poster={data.poster}
+              year={data.release_date}
+              poster={data.poster_path}
             />
           );
         })}
-        <p>{nama}<br /></p>
-        <button onClick={handleClick}><p>Add Movie</p></button>
+        {/* <p>{nama}<br /></p> */}
+        {/* <button onClick={handleClick}><p>Add Movie</p></button> */}
       </div>
-      <AddMovieForm onAddMovie={addMovie}/>
+      <AddMovieForm onAddMovie={addMovie} />
     </div>
   );
 };

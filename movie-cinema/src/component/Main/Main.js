@@ -61,11 +61,11 @@ const Main = () => {
         <div class="content">
             <Hero />
             <Movies />
-            {
+            {/* {
                 datas.map((data) => (
                     <User nama={data.nama} member={data.member} message={() => alert(data.message)} />
                 ))
-            }
+            } */}
             {/* <Counter /> */}
         </div>
     )
