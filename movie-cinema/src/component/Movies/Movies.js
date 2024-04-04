@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Movie from "../Movie/Movie";
 import "./Movies.css";
 import AddMovieForm from "../AddMovieForm/AddMovieForm";
-import { getMovieList } from "../../api.js";
+import { getMovieList } from "../../Api.js";
 
 const Movies = () => {
   const [nama, setNama] = useState("ucup");

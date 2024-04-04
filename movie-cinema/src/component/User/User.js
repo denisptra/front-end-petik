@@ -1,4 +1,4 @@
-import "./User.css"
+import "./User.css";
 
 const User = (props) => {
     const { nama, member, message } = props;

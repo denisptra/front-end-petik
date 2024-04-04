@@ -1,11 +1,5 @@
 import Navbar from "./component/Navbar/Navbar.js";
-// import Car from "./component/Car/Car";
-// import User from "./component/User/User";
 import Footer from "./component/Footer/Footer.js";  
-// import Main from "./component/Main/Main.js";
-// import Movie from "./component/Movie/Movie.js";
-// // import Movies from "./component/Movies/Movies.js";
-// import AddMovieForm from "./component/AddMovieForm/AddMovieForm.js";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home.js";
 import Popular from "./pages/movie/Popular.js";

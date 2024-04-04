@@ -4,7 +4,7 @@ import "./Hero.css";
 const Hero = () => {
     return (
         <div>
-            <div class="comtainer">
+            <div class="container">
                 <section class="hero">
                     <div class="hero-left">
                         <h2 class="hero-title">Title</h2>
