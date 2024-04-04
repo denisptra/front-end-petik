@@ -5,6 +5,7 @@ import Footer from "../component/Footer";
 const Dashboard = () => {
   return <div>
     <NavbarComponent />
+    
     <Footer />
   </div>;
 };
