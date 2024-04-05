@@ -9,10 +9,10 @@ const Hero = () => {
           <h2 className="text-primary">Title</h2>
           <h3 className="text-primary">Genre : </h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
-            corrupti porro possimus quas quibusdam temporibus ea! Vel distinctio
-            quibusdam voluptate ullam officiis, unde corporis? Consequatur
-            doloremque quo quibusdam deleniti asperiores.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Voluptatibus, rem. Et harum aut, commodi consequuntur facilis
+            doloribus repellat eius explicabo fugit, unde repudiandae.
+            Dignissimos, molestias?
           </p>
           <Button color="primary">Primary</Button>
         </Col>

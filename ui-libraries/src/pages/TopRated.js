@@ -1,17 +1,17 @@
-import React from 'react'
-import TableComponent from '../component/Table'
-import NavbarComponent from '../component/Navbar'
-import Footer from '../component/Footer'
+import React from "react";
+import TableComponent from "../component/Table";
+import Footer from "../component/Footer";
+import NavbarComponent from "../component/Navbar";
 
 const TopRated = () => {
   return (
     <div>
-        <NavbarComponent />
-        <h1>Top Rated</h1>
-        <TableComponent />
-        <Footer />
+      <NavbarComponent />
+      <h1>Top Rated</h1>
+      <TableComponent />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default TopRated
+export default TopRated;

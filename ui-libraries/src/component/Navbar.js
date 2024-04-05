@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { NavLink } from "react";
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
+  NavItem,
   NavbarText,
 } from "reactstrap";
+import { NavLink } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function NavbarComponent(args) {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,26 +19,35 @@ function NavbarComponent(args) {
   return (
     <div>
       <Navbar {...args} expand="md" className="bg-primary navbar-dark">
-        <NavbarBrand className="text-light">
-          Jual-in
-        </NavbarBrand>
+        <NavbarBrand href="/">Jual-in</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
-            <NavLink to={"/"} className="text-light mx-3" style={{textDecoration: "none"}}>
+            <NavLink
+              className="text-light mx-3"
+              to={"/"}
+              style={{ textDecoration: "none" }}
+            >
               Home
             </NavLink>
-            <NavLink to={"/dashboard"} className="text-light mx-3" style={{textDecoration: "none"}}>
+            <NavLink
+              className="text-light mx-3"
+              to={"/dashboard"}
+              style={{ textDecoration: "none" }}
+            >
               Dashboard
             </NavLink>
-            <NavLink to={"/top"} className="text-light mx-3" style={{textDecoration: "none"}}>
+            <NavLink
+              className="text-light mx-3"
+              to={"/top"}
+              style={{ textDecoration: "none" }}
+            >
               Top Rated
             </NavLink>
-            <NavLink to={"/login"} className="text-light mx-3" style={{textDecoration: "none"}}>
-              Login
-            </NavLink>
           </Nav>
-          <NavbarText>Samsul</NavbarText>
+          <NavLink to={"/login"}>
+            <button className="button is-light" >Login</button>
+          </NavLink>
         </Collapse>
       </Navbar>
     </div>

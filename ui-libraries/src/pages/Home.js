@@ -1,15 +1,15 @@
 import React from "react";
 import Hero from "../component/Hero";
-import Movies from "../component/Movies";
+import Products from "../component/Products"
 import NavbarComponent from "../component/Navbar";
-import Footer from "../component/Footer.js";
+import Footer from "../component/Footer";
 
 const Home = () => {
   return (
     <div>
       <NavbarComponent />
       <Hero />
-      <Movies />
+      <Products />
       <Footer />
     </div>
   );
